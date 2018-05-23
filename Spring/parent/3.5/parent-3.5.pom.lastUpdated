@@ -1,0 +1,8 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Wed Nov 15 22:16:33 IST 2017
+@default-repository-http\://svntruops.sdgc.com\:8081/nexus/content/repositories/releases/.lastUpdated=1510760531309
+https\://repo.maven.apache.org/maven2/.lastUpdated=1510764393321
+http\://svntruops.sdgc.com\:8081/nexus/content/repositories/releases/.error=Could not transfer artifact com.sdgc.truops\:parent\:pom\:3.5 from/to repository (http\://svntruops.sdgc.com\:8081/nexus/content/repositories/releases/)\: svntruops.sdgc.com
+@default-repository-http\://truops-build01.noida.sdgc.com\:8081/nexus/content/repositories/releases/.lastUpdated=1510764389552
+http\://truops-build01.noida.sdgc.com\:8081/nexus/content/repositories/releases/.error=Could not transfer artifact com.sdgc.truops\:parent\:pom\:3.5 from/to repository (http\://truops-build01.noida.sdgc.com\:8081/nexus/content/repositories/releases/)\: truops-build01.noida.sdgc.com
+https\://repo.maven.apache.org/maven2/.error=

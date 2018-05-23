@@ -1,0 +1,5 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Wed Nov 15 22:27:26 IST 2017
+https\://repo.maven.apache.org/maven2/.lastUpdated=1510765046175
+@default-repository-http\://truops-build01.noida.sdgc.com\:8081/nexus/content/repositories/releases/.lastUpdated=1510765044196
+http\://truops-build01.noida.sdgc.com\:8081/nexus/content/repositories/releases/.error=Could not transfer artifact org.apache.ws.xmlschema\:xmlschema\:pom\:2.1.0 from/to repository (http\://truops-build01.noida.sdgc.com\:8081/nexus/content/repositories/releases/)\: truops-build01.noida.sdgc.com

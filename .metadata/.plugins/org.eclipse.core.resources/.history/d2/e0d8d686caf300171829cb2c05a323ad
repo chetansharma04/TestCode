@@ -1,0 +1,57 @@
+package java8Features.streamPrograms;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Student {
+
+	static List<String> populateDate(){
+		List<Student> studentsList = new ArrayList<Student>();
+		Student student1 = new Student();
+		student1.age = 10;
+		student1.firstName = "Chetan";
+		student1.lastName = "Sharma";
+		studentsList.add(student1);
+		
+		Student student2 = new Student();
+		student1.age = 11;
+		student1.firstName = "Snehlata";
+		student1.lastName = "Sharma";
+		studentsList.add(student1);
+		
+		Student student3 = new Student();
+		student1.age = 12;
+		student1.firstName = "Vanshika";
+		student1.lastName = "Sharma";
+		studentsList.add(student1);
+		
+		
+		return null;
+		
+	}
+	
+	String firstName;
+	String lastName;
+	Integer age;
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public Integer getAge() {
+		return age;
+	}
+	public void setAge(Integer age) {
+		this.age = age;
+	}
+	
+	
+
+}

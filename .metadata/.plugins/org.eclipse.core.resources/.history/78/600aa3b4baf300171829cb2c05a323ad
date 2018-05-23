@@ -1,0 +1,42 @@
+package java8Features.streamPrograms;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.stream.Stream;
+//ways to build/get stream
+public class Stream1 {
+
+	public static void main(String[] args) throws Exception {
+
+		List<Integer> values = Arrays.asList(1,2,3,4,5);
+		Stream<Integer> streamList = values.stream();
+
+		Map<Integer, String> map = new HashMap<Integer,String>();
+		Stream<Integer> streamMapKeys = map.keySet().stream();
+		Stream<String> streamMapValues = map.values().stream();
+		
+		Set<Integer> setInteger = new HashSet<Integer>();
+		Stream<Integer> streamSet = setInteger.stream();
+		//Creating Stream of hardcoded Strings and printing each String
+		Stream.of("This", "is", "Java8", "Stream").forEach(System.out::println);
+		//Creating stream of arrays
+		String[] stringArray = new String[]{"Streams", "can", "be", "created", "from", "arrays"};
+		Arrays.stream(stringArray).forEach(System.out::println);
+		        
+		//Creating BufferedReader for a file
+		BufferedReader reader = Files.newBufferedReader(Paths.get("d:/File.txt"), StandardCharsets.UTF_8);
+		//BufferedReader's lines methods returns a stream of all lines
+		reader.lines().forEach(System.out::println);
+		
+	}
+
+}

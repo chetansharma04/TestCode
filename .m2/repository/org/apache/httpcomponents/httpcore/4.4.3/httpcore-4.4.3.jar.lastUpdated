@@ -1,0 +1,5 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Wed Nov 15 22:49:09 IST 2017
+https\://repo.maven.apache.org/maven2/.lastUpdated=1510766349406
+@default-repository-http\://truops-build01.noida.sdgc.com\:8081/nexus/content/repositories/releases/.lastUpdated=1510765641971
+http\://truops-build01.noida.sdgc.com\:8081/nexus/content/repositories/releases/.error=Could not transfer artifact org.apache.httpcomponents\:httpcore\:jar\:4.4.3 from/to repository (http\://truops-build01.noida.sdgc.com\:8081/nexus/content/repositories/releases/)\: truops-build01.noida.sdgc.com

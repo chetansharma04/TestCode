@@ -1,0 +1,5 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Wed Nov 15 22:48:55 IST 2017
+https\://repo.maven.apache.org/maven2/.lastUpdated=1510766335338
+@default-repository-http\://truops-build01.noida.sdgc.com\:8081/nexus/content/repositories/releases/.lastUpdated=1510765641157
+http\://truops-build01.noida.sdgc.com\:8081/nexus/content/repositories/releases/.error=Could not transfer artifact oro\:oro\:jar\:2.0.8 from/to repository (http\://truops-build01.noida.sdgc.com\:8081/nexus/content/repositories/releases/)\: truops-build01.noida.sdgc.com

@@ -1,0 +1,11 @@
+package threadPrograms;
+
+public class DefensiveCopy {
+
+	public static void main(String[] args) {
+
+		
+		
+	}
+
+}

@@ -1,0 +1,5 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue Dec 12 22:09:31 IST 2017
+https\://repo.maven.apache.org/maven2/.lastUpdated=1513096771247
+@default-repository-http\://truops-build01.noida.sdgc.com\:8081/nexus/content/repositories/releases/.lastUpdated=1513096770725
+http\://truops-build01.noida.sdgc.com\:8081/nexus/content/repositories/releases/.error=Could not transfer artifact org.jboss.shrinkwrap.resolver\:shrinkwrap-resolver-bom\:pom\:1.0.0-beta-7 from/to repository (http\://truops-build01.noida.sdgc.com\:8081/nexus/content/repositories/releases/)\: truops-build01.noida.sdgc.com

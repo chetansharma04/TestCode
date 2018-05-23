@@ -1,0 +1,135 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.sdgc.truops</groupId>
+	<artifactId>TruOps-Remediation-Exception</artifactId>
+	<version>2.0</version>
+	<packaging>war</packaging>
+	<parent>
+		<groupId>com.sdgc.truops</groupId>
+		<artifactId>parent</artifactId>
+		<version>3.5</version>
+	</parent>
+	<name>GRC - Remediation Management</name>
+	<description>Remediation Management from TruOps</description>
+	<dependencies>		
+		<dependency>
+			<groupId>com.sdgc.truops</groupId>
+			<artifactId>TruOps-GRC-CommonMasters</artifactId>
+			<version>2.1</version>
+			<classifier>classes</classifier>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.sdgc.truops</groupId>
+			<artifactId>LMUR</artifactId>
+			<classifier>classes</classifier>
+			<version>3.5</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.sdgc.truops</groupId>
+			<artifactId>TruOps-Compliance</artifactId>
+			<version>3.1</version>
+			<classifier>classes</classifier>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>RemediationException</finalName>
+		<plugins>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1-beta-1</version>
+				<configuration>
+					<archive>
+						<addMavenDescriptor>false</addMavenDescriptor>
+					</archive>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<configuration>
+							<tasks>
+								<taskdef resource="net/sf/antcontrib/antcontrib.properties"
+									classpathref="maven.plugin.classpath" />
+
+								<!-- <copy -->
+								<!-- todir="${env.TOMCAT_HOME}/webapps/${project.build.finalName}"> -->
+								<!-- <fileset dir="${project.build.directory}/${project.build.finalName}"> -->
+								<!-- <exclude name="**/menu.xml"/> -->
+
+								<!-- </fileset> -->
+								<!-- </copy> -->
+							</tasks>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+
+				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>ant-contrib</groupId>
+						<artifactId>ant-contrib</artifactId>
+						<version>1.0b3</version>
+						<exclusions>
+							<exclusion>
+								<groupId>ant</groupId>
+								<artifactId>ant</artifactId>
+							</exclusion>
+						</exclusions>
+					</dependency>
+					<dependency>
+						<groupId>ant</groupId>
+						<artifactId>ant-nodeps</artifactId>
+						<version>1.6.5</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+			<plugin>
+				<artifactId>maven-clean-plugin</artifactId>
+				<configuration>
+					<filesets>
+						<fileset>
+							<directory>${env.TOMCAT_HOME}/webapp/${project.build.finalName}</directory>
+							<followSymlinks>false</followSymlinks>
+							<includes>
+								<include>**/*</include>
+
+							</includes>
+
+
+						</fileset>
+					</filesets>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<name>Release</name>
+			<url>http://svntruops.sdgc.com:8081/nexus/content/repositories/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus</id>
+			<name>RepositoryProxy</name>
+			<url>http://svntruops.sdgc.com:8081/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+	<repositories>
+		<repository>
+			<id>repository</id>
+			<url>http://svntruops.sdgc.com:8081/nexus/content/repositories/releases/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+</project>

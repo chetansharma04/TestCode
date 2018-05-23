@@ -1,0 +1,7 @@
+package stringTest;
+public class CountCharOccurrances {
+	public static void main(String[] args) {
+		String str = "abcdaser;kgu986khgfkhgf";
+		System.out.println("str = "+"abcdaser;kgu986khgfkhgf");
+	}
+}

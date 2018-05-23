@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+
+<project name="TruOps" default="deploy" basedir=".">
+
+<property name="appserver.home" value="D:\dev\tomcat"/>
+<property name="deploy.path" value="${appserver.home}/webapps"/>
+<property name="name" value="ITHM"/>
+
+<!-- Source Directories -->
+<property name="src.dir" value="src" />
+<property name="src.java" value="${src.dir}/main/java" />
+<property name="src.resources" value="${src.dir}/main/resources" />
+<property name="src.webinf" value="${src.dir}/main/webapp/WEB-INF" />
+<property name="src.hbm" value="${src.resources}/hbm" />
+<property name="src.web" value="${src.dir}/main/webapp" />
+
+<property name="src.lib" value="${src.resources}/lib" />
+
+<property name="src.images" value="${src.web}/images" />
+<property name="src.js" value="${src.web}/js" />
+<property name="src.jsp" value="${src.web}/jsp" />
+<property name="src.styles" value="${src.web}/styles" />
+
+
+<!-- Target Build Directory -->
+ <property name="build.dir" value="${deploy.path}/${name}"/>
+
+ <property name="build.webinf" value="${build.dir}/WEB-INF"/>
+ <property name="build.classes" value="${build.webinf}/classes"/>
+ <property name="build.lib" value="${build.webinf}/lib"/>
+ <property name="build.hbm" value="${build.classes}/hbm"/>
+
+ <property name="build.js" value="${build.dir}/js"/>
+ <property name="build.jsp" value="${build.dir}/jsp"/>
+ <property name="build.styles" value="${build.dir}/styles"/>
+ <property name="build.images" value="${build.dir}/images"/>
+
+ <!-- Creates the build directory. -->
+  <target name="setup" >
+    <mkdir dir="${build.dir}"/>
+	<mkdir dir="${build.webinf}"/>
+	<mkdir dir="${build.classes}"/>
+	<mkdir dir="${build.lib}"/>       
+    <mkdir dir="${build.images}"/>
+	<mkdir dir="${build.js}"/>
+	<mkdir dir="${build.jsp}"/>
+	<mkdir dir="${build.styles}"/>
+  </target>
+
+ <!--
+       Copy application files
+  -->
+<target name="copyfiles" depends="setup">
+
+<copy todir="${build.dir}" >
+			<fileset dir="${src.web}">
+				<include name="*.jsp"/>
+                <include name="*.html"/>
+			</fileset>
+</copy>
+	<copy todir="${build.hbm}" >
+				<fileset dir="${src.hbm}">
+				</fileset>
+	 </copy>
+<copy todir="${build.webinf}" >
+				<fileset dir="${src.webinf}">
+				</fileset>
+	 </copy>
+	
+ <copy todir="${build.js}" >
+			<fileset dir="${src.js}">
+			</fileset>
+ </copy>
+ <copy todir="${build.jsp}" >
+			<fileset dir="${src.jsp}">
+			</fileset>
+ </copy>
+	</target>
+
+	<!--  Simply compiles everything in one pass. -->
+    <target name="compile" depends="setup">
+		<javac destdir="${build.classes}" debug="true" deprecation="off" failonerror="true">
+			<src path="${src.java}"/>
+		</javac>
+	</target>
+<!-- deploy the application to target host -->
+
+	<target name="deploy" depends="setup,copyfiles,compile" description="Deploy application">
+	</target>
+
+</project>

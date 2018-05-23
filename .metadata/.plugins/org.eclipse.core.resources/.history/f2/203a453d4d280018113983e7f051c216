@@ -1,0 +1,29 @@
+package threadPrograms;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Collections;
+
+public class DefensiveCopy {
+	public static void main(String[] args) {
+			List<String> readOnlyList = new ArrayList<String>();
+			readOnlyList.add("aaa");
+			readOnlyList.add("bbb");
+			readOnlyList.add("ccc");
+			System.out.println("Initial copy of readOnlyList");
+			readOnlyList.forEach(System.out::println);
+			
+			List<String> defensiveCopy = java.util.Collections.unmodifiableList(readOnlyList);
+			defensiveCopy.add("eee");
+			System.out.println("defensiveCopy List");
+			readOnlyList.forEach(System.out::println);
+			
+			System.out.println("Initial copy of readOnlyList");
+			readOnlyList.forEach(System.out::println);
+			
+		
+		
+	}
+
+}

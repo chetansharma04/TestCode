@@ -1,0 +1,13 @@
+anonymizeMessages=true
+anonymizeStackTraces=true
+configured=true
+eclipse.preferences.version=1
+reporterEmail=chetan.sharma@sdgc.com
+reporterName=Chetan Sharma
+resetSendMode=KEEP
+resetSendModeOn=0
+sendMode=NOTIFY
+servers/org.eclipse.epp.logging.aeri.ide.server/anonymizeStackTraces=true
+servers/org.eclipse.epp.logging.aeri.ide.server/configured=true
+servers/org.eclipse.epp.logging.aeri.ide.server/reporterEmail=chetan.sharma@sdgc.com
+servers/org.eclipse.epp.logging.aeri.ide.server/reporterName=Chetan Sharma

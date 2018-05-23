@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Alien.java&apos; to &apos;hibernateOneToMany/src/main/java/com.chetan.hibernate.hibernateOneToMany&apos;&#x0D;&#x0A;- Original project: &apos;hibernateEmbeddable&apos;&#x0D;&#x0A;- Destination element: &apos;hibernateOneToMany/src/main/java/com.chetan.hibernate.hibernateOneToMany&apos;&#x0D;&#x0A;- Original element: &apos;com.chetan.hibernate.hibernateEmbeddable.Alien.java&apos;" description="Copy compilation unit" destination="=hibernateOneToMany/src\/main\/java&lt;com.chetan.hibernate.hibernateOneToMany" element1="/src\/main\/java&lt;com.chetan.hibernate.hibernateEmbeddable{Alien.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1516541402103" units="1" version="1.0"/>
+</session>

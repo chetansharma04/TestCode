@@ -1,0 +1,12 @@
+com\chetan\model\Stock.class
+com\chetan\bo\StockBo.class
+com\chetan\bo\impl\StockBoImpl.class
+com\chetan\bo\impl\CategoryBoImpl.class
+com\chetan\dao\CategoryDao.class
+com\chetan\util\CustomHibernateDaoSupport.class
+com\chetan\dao\StockDao.class
+com\chetan\bo\CategoryBo.class
+com\chetan\common\App.class
+com\chetan\model\Category.class
+com\chetan\dao\impl\StockDaoImpl.class
+com\chetan\dao\impl\CategoryDaoImpl.class

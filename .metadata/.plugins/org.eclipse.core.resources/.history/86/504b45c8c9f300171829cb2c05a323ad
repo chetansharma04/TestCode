@@ -1,0 +1,11 @@
+package java8Features.streamPrograms;
+
+public class Student {
+	
+	String firstName;
+	String lastName;
+	Integer age;
+	
+	
+
+}

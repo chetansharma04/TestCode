@@ -1,0 +1,29 @@
+package java8Features.streamPrograms;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.stream.Stream;
+//ways to build/get stream
+
+public class Stream1 {
+
+	public static void main(String[] args) {
+
+		List<Integer> values = Arrays.asList(1,2,3,4,5);
+		Stream<Integer> streamList = values.stream();
+
+		Map<Integer, String> map = new HashMap<Integer,String>();
+		Stream<Integer> streamMapKeys = map.keySet().stream();
+		Stream<String> streamMapValues = map.values().stream();
+		
+		Set<Integer> setInteger = new HashSet<Integer>();
+		Stream<Integer> streamSet = setInteger.stream();
+		
+		
+	}
+
+}

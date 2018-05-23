@@ -1,0 +1,38 @@
+-- Table: product
+
+-- DROP TABLE product;
+
+CREATE TABLE product
+(
+  product_id integer NOT NULL,
+  product_code character varying(100),
+  product_desc character varying(500),
+  CONSTRAINT product_id_pk PRIMARY KEY (product_id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE product
+  OWNER TO postgres;
+  
+  
+  -- Table: product_qoh
+
+-- DROP TABLE product_qoh;
+
+CREATE TABLE product_qoh
+(
+  qoh_id integer NOT NULL,
+  qty integer,
+  product_id integer,
+  CONSTRAINT qoh_id_pk PRIMARY KEY (qoh_id),
+  CONSTRAINT product_id_fk FOREIGN KEY (product_id)
+      REFERENCES product (product_id) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE product_qoh
+  OWNER TO postgres;
+  

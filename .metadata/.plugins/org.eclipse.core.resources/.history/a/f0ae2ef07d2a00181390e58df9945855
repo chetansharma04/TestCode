@@ -1,0 +1,14 @@
+package stringTest;
+
+public class CountCharOccurrances {
+	public static void main(String[] args) {
+		String str = "abcdaser;kgu986khgfkhgf";
+		System.out.println("str = "+str);
+
+		char[] charArray = str.toCharArray();
+		
+//		int count = Stream.of(str).filter("a".equalsIgnoreCase(str))
+		long count = str.chars().filter(ch -> ch=='a').count();
+		System.out.println("count of 'a' = "+count);
+	}
+}
